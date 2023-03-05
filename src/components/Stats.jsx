@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import styles from '../styles';
+import { stats } from '../constants/index';
 
 const Stats = () => {
   return (
-    <div>Stats</div>
+    <section className={`${styles.flexCenter} w-full flex-wrap sm:mb-20 mb-6 ${styles.paddingX}`}>
+      {stats.map((stat)=>(
+        <div className={`flex-1 flex justify-start items-center m-3 `} key={stat.id}>
+          <h4 className='text-white font-poppins font-semibold md:text-[40px] text-[30px] xs:leading-[53px] leading-[43px]'>{stat.value}</h4>
+          <p className='text-white font-normal text-gradient font-poppins md:text-[20px] text-[15px] xs:leading-[27px] leading-[21px] uppercase ml-3'>{stat.title}</p>
+        </div>
+      ))}
+    </section>
   )
 }
 
-export default Stats
+export default Stats;
