@@ -138,6 +138,7 @@
 
   /* global 94%+ browsers support */
   background:linear-gradient(180deg, rgba(188, 165, 250, 1) 0%, rgba(33, 77, 118, 1) 100%);
+  filter: blur(750px);
 
 }
 
@@ -166,4 +167,25 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.img_filter:hover{
+  filter: brightness(400%);
+}
+.button_animation:hover {
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
 }
