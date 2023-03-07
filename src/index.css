@@ -31,7 +31,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .bg-blue-gradient {
@@ -187,5 +186,22 @@
  
   100% {
    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translatex(-50%);
+  animation: slide-in 0.7s ease-out forwards;
+}
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(200%);
+  animation: slide-in 0.7s ease-out forwards;
+}
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
