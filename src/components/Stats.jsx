@@ -8,7 +8,7 @@ const Stats = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry =>{
         if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in-right');
+          entry.target.classList.add('slide-in-up');
         }
       });
     }, {threshold: 0.5});
